@@ -1,0 +1,69 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica-Oblique;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 Helvetica-Bold;
+\f3\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid1\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc0\levelnfcn0\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{decimal\}.}{\leveltext\leveltemplateid101\'02\'00.;}{\levelnumbers\'01;}\fi-360\li720\lin720 }{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{hyphen\}}{\leveltext\leveltemplateid102\'01\uc0\u8259 ;}{\levelnumbers;}\fi-360\li1440\lin1440 }{\listname ;}\listid2}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}}
+\margl1440\margr1440\vieww11980\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i\fs24 \cf0 William Chang | Quarter 2 Project | December 20, 2018\
+SFUHS | Computational Modeling and Simulation | Byron Philhour
+\f1\i0 \ul \
+\
+
+\f2\b Quarter 2 Project
+\f1\b0 \ulnone \
+I made a set of jupyter notebooks that clean California\'92s AQI data from the {\field{\*\fldinst{HYPERLINK "https://www.epa.gov/outdoor-air-quality-data/download-daily-data"}}{\fldrslt EPA website}} and use it for various visualizations. The three main ways are: line graphs, choropleth (concentration) maps, and animated choropleth maps.\
+\
+The recent and ever-increasing wildfires in California is what prompted the topic of this project. I thought it\'92d be fascinating and relevant to examine air quality data in graph and map form (especially animated form). The EPA\'92s visualizations also weren\'92t too great in my opinion\'85so I focused in on AQI in California from 2010-present, and wrote versatile functions to visualize air quality using Python. I think they look quite nice!\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f3 \cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1 \cf0 \ul \ulc0 Description of Notebooks\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls1\ilvl0\cf0 \ulnone {\listtext	\uc0\u8259 	}00_Testing: Nothing important here. I used this notebook for testing all sorts of things \'97 mainly, functions or methods of doing things that I was unfamiliar with.\
+{\listtext	\uc0\u8259 	}01_PreliminaryDataReading: Nothing important here either. This is the first notebook I created, which I used to test anything I needed to test.\
+{\listtext	\uc0\u8259 	}02_CleanData: This notebook is important! Included in the zip file is a pickle file with the cleaned dataset, and this notebook is how I got that file. If you ever want to get the latest data, you\'92ll have to run this notebook.\
+{\listtext	\uc0\u8259 	}03_LineGraphs: Shows off line graph functions.\
+{\listtext	\uc0\u8259 	}04_Maps: Shows off mapping functions.\
+{\listtext	\uc0\u8259 	}05_AnimatedMaps: Shows off animated mapping functions.\
+{\listtext	\uc0\u8259 	}visfunctions: Contains all the goodies! Every function used in 03-05 notebooks is contained here. Stands for visualization functions, in case you were wondering :)\ul \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \ulc0 \
+\
+Geopandas installation\ulnone \
+For 04_Maps and 05_AnimatedMaps, I\'92m using geopandas. If you don\'92t have geopandas installed yet, here\'92s how to do it (it\'92s quite a ride):\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	1.	}Make new environment
+\f3 \
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls2\ilvl1\cf0 {\listtext	\uc0\u8259 	}conda create -n gpd -c conda-forge python=3.6 geopandas
+\f1 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	2.	}Activate environment\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls2\ilvl1
+\f3 \cf0 {\listtext	\uc0\u8259 	}source activate gpd\
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0
+\f1 \cf0 {\listtext	3.	}Install ipython in environment\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls2\ilvl1
+\f3 \cf0 {\listtext	\uc0\u8259 	}conda install notebook ipykernel\
+{\listtext	\uc0\u8259 	}ipython kernel install --user
+\f1 \
+\pard\tx220\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li720\fi-720\pardirnatural\partightenfactor0
+\ls2\ilvl0\cf0 {\listtext	4.	}Open jupyter -- make sure you're starting jupyter in this environment, or else geopandas won't work\
+\pard\tx940\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\li1440\fi-1440\pardirnatural\partightenfactor0
+\ls2\ilvl1
+\f3 \cf0 {\listtext	\uc0\u8259 	}jupyter notebook\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+More detailed information is in 05_AnimatedMaps.}
